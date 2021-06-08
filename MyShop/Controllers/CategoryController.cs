@@ -23,11 +23,14 @@ namespace MyShop.Controllers
         }
 
         [HttpGet]
-        public IEnumerable <Category> Get()
+        public IEnumerable<Category> Get()
         {
             return repository.Get().ToList();
-
         }
-       
+        [HttpGet("{Id}")]
+        public Category GetId(int Id)
+        {
+            return repository.GetById(Id);
+        }
     }
 }
