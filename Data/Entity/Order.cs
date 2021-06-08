@@ -9,6 +9,7 @@ namespace Data.Entity
     {
         [Key]
         public int Id { get; set; }
+        [MaxLength(30)]
         public string Status { get; set; }
 
         //public enum status

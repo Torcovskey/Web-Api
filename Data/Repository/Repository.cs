@@ -57,10 +57,10 @@ namespace Data.Repository
             return context.Set<T>().Find(entityId);
         }
 
-        //public void Save()
-        //{
-        //    context.SaveChanges();
-        //}
+        public void Save()
+        {
+            context.SaveChanges();
+        }
 
         public void Update(T entity)
         {

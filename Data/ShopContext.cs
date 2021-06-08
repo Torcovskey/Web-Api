@@ -1,5 +1,6 @@
 ﻿using Data.Entity;
 using Data.Entity.IntermediateEntity;
+using Data.Entity.IntermediateEntity;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,8 @@ namespace Data
         public DbSet<Basket> Baskets { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<BasketProduct> BasketProducts { get; set; }
 
         public ShopContext(DbContextOptions options) : base(options)
         {

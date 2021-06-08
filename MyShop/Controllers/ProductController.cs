@@ -10,32 +10,32 @@ namespace MyShop.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class CategoryController : Controller
+    public class ProductController : Controller
     {
-        protected IRepository<Category> repository;
-        public CategoryController(DbContext context)
+        protected IRepository<Product> repository;
+        public ProductController(DbContext context)
         {
-            this.repository = new Repository<Category>(context);
+            this.repository = new Repository<Product>(context);
         }
 
         [HttpGet]
-        public IEnumerable<Category> Get()
+        public IEnumerable<Product> Get()
         {
             return repository.Get().ToList();
         }
         [HttpGet("{Id}")]
-        public Category GetId(int Id)
+        public Product GetId(int Id)
         {
             return repository.GetById(Id);
         }
         [HttpPost]
-        public void Post(Category entity)
+        public void Post(Product entity)
         {
             repository.Add(entity);
             repository.Save();
         }
         [HttpPut]
-        public void Put(Category entity)
+        public void Put(Product entity)
         {
             repository.Update(entity);
             repository.Save();
@@ -47,7 +47,7 @@ namespace MyShop.Controllers
             repository.Save();
         }
         [HttpDelete]
-        public void Delete(Category entity)
+        public void Delete(Product entity)
         {
             repository.Delete(entity);
             repository.Save();
