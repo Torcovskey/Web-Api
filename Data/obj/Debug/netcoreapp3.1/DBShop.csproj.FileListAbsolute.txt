@@ -1,0 +1,12 @@
+D:\Projects\repos\DBShop\DBShop\bin\Debug\netcoreapp3.1\DBShop.deps.json
+D:\Projects\repos\DBShop\DBShop\bin\Debug\netcoreapp3.1\DBShop.runtimeconfig.json
+D:\Projects\repos\DBShop\DBShop\bin\Debug\netcoreapp3.1\DBShop.runtimeconfig.dev.json
+D:\Projects\repos\DBShop\DBShop\bin\Debug\netcoreapp3.1\DBShop.dll
+D:\Projects\repos\DBShop\DBShop\bin\Debug\netcoreapp3.1\DBShop.pdb
+D:\Projects\repos\DBShop\DBShop\obj\Debug\netcoreapp3.1\DBShop.csprojAssemblyReference.cache
+D:\Projects\repos\DBShop\DBShop\obj\Debug\netcoreapp3.1\DBShop.AssemblyInfoInputs.cache
+D:\Projects\repos\DBShop\DBShop\obj\Debug\netcoreapp3.1\DBShop.AssemblyInfo.cs
+D:\Projects\repos\DBShop\DBShop\obj\Debug\netcoreapp3.1\DBShop.csproj.CoreCompileInputs.cache
+D:\Projects\repos\DBShop\DBShop\obj\Debug\netcoreapp3.1\DBShop.dll
+D:\Projects\repos\DBShop\DBShop\obj\Debug\netcoreapp3.1\DBShop.pdb
+D:\Projects\repos\DBShop\DBShop\obj\Debug\netcoreapp3.1\DBShop.genruntimeconfig.cache
