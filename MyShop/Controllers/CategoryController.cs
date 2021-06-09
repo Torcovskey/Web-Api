@@ -5,6 +5,9 @@ using System.Collections.Generic;
 using System.Linq;
 using Data.Repository;
 using Data.Interfaces;
+using MyShop;
+using MyShop.ConvertToApi;
+using Data.ApiEntity;
 
 namespace MyShop.Controllers
 {
@@ -12,45 +15,17 @@ namespace MyShop.Controllers
     [Route("[controller]")]
     public class CategoryController : Controller
     {
-        protected IRepository<Category> repository;
+        private UnitOfWork repository;
         public CategoryController(DbContext context)
         {
-            this.repository = new Repository<Category>(context);
+            this.repository = new UnitOfWork(context);
         }
 
         [HttpGet]
-        public IEnumerable<Category> Get()
+        public IEnumerable<ApiCategory> Get()
         {
-            return repository.Get().ToList();
-        }
-        [HttpGet("{Id}")]
-        public Category GetId(int Id)
-        {
-            return repository.GetById(Id);
-        }
-        [HttpPost]
-        public void Post(Category entity)
-        {
-            repository.Add(entity);
-            repository.Save();
-        }
-        [HttpPut]
-        public void Put(Category entity)
-        {
-            repository.Update(entity);
-            repository.Save();
-        }
-        [HttpDelete]
-        public void Delete(int Id)
-        {
-            repository.DeleteById(Id);
-            repository.Save();
-        }
-        [HttpDelete]
-        public void Delete(Category entity)
-        {
-            repository.Delete(entity);
-            repository.Save();
+            var categories = repository.CategoryRepository.Get();
+            return ConvertToApi.ConvertToApi.Categories(categories);
         }
     }
 }

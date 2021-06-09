@@ -18,6 +18,7 @@ namespace Data.Entity
         public int Price { get; set; }
 
         //Navigation
+        public Company Company { get; set; }
         public Category Category { get; set; }
         public List<BasketProduct> BasketProducts { get; set; }
         public List<OrderProducts> OrderProducts { get; set; }

@@ -1,4 +1,5 @@
 ﻿using Data.Interfaces;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Data.Entity
@@ -9,5 +10,8 @@ namespace Data.Entity
         public int Id { get; set; }
         [MaxLength(30)]
         public string Name { get; set; }
+
+        // Navigation
+        public List<Product> Products { get; set; } 
     }
 }

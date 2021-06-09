@@ -10,14 +10,10 @@ namespace Data.ApiEntity
     public class ApiProduct
     {
         public int Id { get; set; }
-        public int CategoryId { get; set; }
-        public int CompanyId { get; set; }
+        public string Company { get; set; }
+        public string Category { get; set; }
         public string Model { get; set; }
         public int NumberOfProducts { get; set; }
         public int Price { get; set; }
-
-        //Navigation
-        public Category Category { get; set; }
-        public List<BasketProduct> BasketProducts { get; set; }
     }
 }

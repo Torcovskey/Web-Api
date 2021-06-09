@@ -1,12 +1,5 @@
 ﻿using Data.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using Data;
 using Data.Entity;
-using Data.Interfaces;
-using Data.Entity.IntermediateEntity;
-using Data.Repository;
 using Microsoft.EntityFrameworkCore;
 
 namespace Data.Repository

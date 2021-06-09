@@ -1,6 +1,5 @@
 ﻿using Data.Entity;
 using Data.Entity.IntermediateEntity;
-using Data.Entity.IntermediateEntity;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
