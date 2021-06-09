@@ -16,6 +16,8 @@ namespace Data
         public DbSet<Product> Products { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<BasketProduct> BasketProducts { get; set; }
+        public DbSet<OrderProducts> OrderProducts { get; set; }
+        public DbSet<Company> Companies { get; set; }
 
         public ShopContext(DbContextOptions options) : base(options)
         {
@@ -23,6 +25,8 @@ namespace Data
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            // Basket - product
+
             modelBuilder.Entity<BasketProduct>()
                 .HasKey(t => new { t.BasketId, t.ProductId });
 
@@ -34,6 +38,21 @@ namespace Data
             modelBuilder.Entity<BasketProduct>()
                 .HasOne(sc => sc.Product)
                 .WithMany(c => c.BasketProducts)
+                .HasForeignKey(sc => sc.ProductId);
+
+            // Order - product
+
+            modelBuilder.Entity<OrderProducts>()
+                .HasKey(t => new { t.OrderId, t.ProductId });
+
+            modelBuilder.Entity<OrderProducts>()
+                .HasOne(sc => sc.Order)
+                .WithMany(a => a.OrderProducts)
+                .HasForeignKey(sc => sc.OrderId);
+
+            modelBuilder.Entity<OrderProducts>()
+                .HasOne(sc => sc.Product)
+                .WithMany(c => c.OrderProducts)
                 .HasForeignKey(sc => sc.ProductId);
         }
     }

@@ -10,7 +10,7 @@ namespace Data.Entity
     {
         [Key]
         public int Id { get; set; }
-        public List<Product> Products { get; set; }
+        //public List<Product> Products { get; set; }
 
         //Navigation
         public Account Account { get; set; }

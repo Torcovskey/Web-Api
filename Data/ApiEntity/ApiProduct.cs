@@ -1,18 +1,17 @@
-﻿using Data.Entity.IntermediateEntity;
-using Data.Interfaces;
+﻿using Data.Entity;
+using Data.Entity.IntermediateEntity;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Text;
 
-namespace Data.Entity
+namespace Data.ApiEntity
 {
-    public class Product : IEntity
+    public class ApiProduct
     {
-        [Key]
         public int Id { get; set; }
         public int CategoryId { get; set; }
         public int CompanyId { get; set; }
-        [MaxLength(30)]
         public string Model { get; set; }
         public int NumberOfProducts { get; set; }
         public int Price { get; set; }
@@ -20,6 +19,5 @@ namespace Data.Entity
         //Navigation
         public Category Category { get; set; }
         public List<BasketProduct> BasketProducts { get; set; }
-        public List<OrderProducts> OrderProducts { get; set; }
     }
 }
