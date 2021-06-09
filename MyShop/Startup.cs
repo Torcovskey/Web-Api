@@ -7,8 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Data;
 using Microsoft.EntityFrameworkCore;
-using Data.Interfaces;
-using Data.Repository;
+using Service.Repository;
 
 namespace MyShop
 {
